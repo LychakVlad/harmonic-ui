@@ -2,25 +2,23 @@ import "./Button.scss";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  color: "blue" | "white";
-  size?: "sm";
-  hasBorder?: boolean;
+  buttonStyle: "primary" | "outline" | "danger" | "success";
+  size?: "sm" | "md" | "lg";
   disabled?: boolean;
   isLoading?: boolean;
 }
 
 export const Button = ({
   children,
-  color = "blue",
+  buttonStyle = "primary",
   size = "sm",
-  hasBorder = true,
+
   disabled = false,
   isLoading = false,
   ...props
 }: ButtonProps) => {
-  const hasBorderClass = hasBorder && `btn--border`;
   const isLoadingClass = isLoading && `btn--loading`;
-  const classNames = `btn btn--${color} btn--${size} ${hasBorderClass} ${isLoadingClass}`;
+  const classNames = `btn btn--${buttonStyle} btn--${size} ${isLoadingClass}`;
 
   return (
     <button className={classNames} {...props} disabled={disabled}>

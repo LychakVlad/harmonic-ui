@@ -12,5 +12,6 @@ const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 export const Base = Template.bind({});
 Base.args = {
   children: "Press me!",
-  hasBorder: true,
+
+  buttonStyle: "danger",
 };
