@@ -2,7 +2,7 @@ import "./Button.scss";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  buttonStyle: "primary" | "outline" | "danger" | "success";
+  buttonStyle: "primary" | "outline" | "danger" | "success" | "warning";
   size?: "sm" | "md" | "lg";
   disabled?: boolean;
   isLoading?: boolean;
