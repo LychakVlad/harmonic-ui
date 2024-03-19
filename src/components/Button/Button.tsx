@@ -1,3 +1,4 @@
+import Spinner from "../Spinner/Spinner";
 import "./Button.scss";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -24,7 +25,7 @@ export const Button = ({
     <button className={classNames} {...props} disabled={disabled}>
       {isLoading ? (
         <div className="is-loading-block">
-          <div className="spinner" />
+          <Spinner spinerStyle={buttonStyle} size={size} />
           Loading...
         </div>
       ) : (

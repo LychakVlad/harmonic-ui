@@ -1,57 +1,16 @@
 @import "../../styles/variables.scss";
 
-$bg-color--primary: $blue3;
-$text-color--primary: $white;
-$border-color--primary: $blue3;
-$bg-color--primary--hover: $blue4;
-$bg-color--primary--focus: $blue2;
-$bg-color--primary--active: $blue2;
-$bg-color--primary--disabled: $gray4;
-$text-color--primary--disabled: $gray3;
-
-$bg-color--outline: transparent;
-$text-color--outline: $blue3;
-$border-color--outline: $blue3;
-$bg-color--outline--hover: $blue4;
-$bg-color--outline--focus: $blue2;
-$bg-color--outline--active: $blue2;
-$bg-color--outline--disabled: $gray4;
-$text-color--outline--disabled: $gray3;
-
-$bg-color--success: $green3;
-$text-color--success: $white;
-$border-color--success: $green3;
-$bg-color--success--hover: $green4;
-$bg-color--success--focus: $green2;
-$bg-color--success--active: $green2;
-$bg-color--success--disabled: $gray4;
-$text-color--success--disabled: $gray3;
-
-$bg-color--warning: $orange3;
-$text-color--warning: $white;
-$border-color--warning: $orange3;
-$bg-color--warning--hover: $orange4;
-$bg-color--warning--focus: $orange2;
-$bg-color--warning--active: $orange2;
-$bg-color--warning--disabled: $gray4;
-$text-color--warning--disabled: $gray3;
-
-$bg-color--danger: $red3;
-$text-color--danger: $white;
-$border-color--danger: $red3;
-$bg-color--danger--hover: $red4;
-$bg-color--danger--focus: $red2;
-$bg-color--danger--active: $red2;
-$bg-color--danger--disabled: $gray4;
-$text-color--danger--disabled: $gray3;
-
 .spinner {
-  height: 100px;
-  width: 100px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
-  border: 2px solid blue;
+  border: 2px solid $white;
   border-top-color: #63636300;
   animation: spin 1s linear infinite;
+
+  &--outline {
+    border-color: $blue3;
+  }
 }
 
 @keyframes spin {
