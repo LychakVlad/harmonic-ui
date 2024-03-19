@@ -1,8 +1,8 @@
 @import "../../styles/variables.scss";
 
 .spinner {
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   border: 2px solid $white;
   border-top-color: #63636300;
@@ -10,6 +10,27 @@
 
   &--outline {
     border-color: $blue3;
+    border-top-color: $white;
+
+    &-disabled {
+      border-color: $gray3;
+      border-top-color: $white;
+    }
+  }
+
+  &--sm {
+    height: 12px;
+    width: 12px;
+  }
+
+  &--md {
+    height: 16px;
+    width: 16px;
+  }
+
+  &--lg {
+    height: 20px;
+    width: 20px;
   }
 }
 

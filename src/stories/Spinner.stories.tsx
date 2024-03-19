@@ -1,10 +1,11 @@
-import Spinner from "../components/Spinner/Spinner";
+import { StoryFn } from "@storybook/react";
+import Spinner, { SpinnerProps } from "../components/Spinner/Spinner";
 
 export default {
   title: "Components/Spinner",
   component: Spinner,
 };
 
-const Template = (args: any) => <Spinner {...args} />;
+const Template: StoryFn<SpinnerProps> = (args) => <Spinner {...args} />;
 
 export const Base = Template.bind({});

@@ -13,7 +13,6 @@ export const Button = ({
   children,
   buttonStyle = "primary",
   size = "sm",
-
   disabled = false,
   isLoading = false,
   ...props
@@ -24,8 +23,8 @@ export const Button = ({
   return (
     <button className={classNames} {...props} disabled={disabled}>
       {isLoading ? (
-        <div className="is-loading-block">
-          <Spinner spinerStyle={buttonStyle} size={size} />
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <Spinner spinerStyle={buttonStyle} size={size} disabled={disabled} />
           Loading...
         </div>
       ) : (
