@@ -1,4 +1,3 @@
-import React from "react";
 import { StoryFn } from "@storybook/react";
 import { Button, ButtonProps } from "../components/Button/Button";
 
@@ -12,5 +11,19 @@ const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 export const Base = Template.bind({});
 Base.args = {
   children: "Press me!",
-  buttonStyle: "danger",
+  buttonStyle: "primary",
 };
+
+export const AllSizes = () => (
+  <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+    <Button buttonStyle="primary" size="lg">
+      Press me!
+    </Button>
+    <Button buttonStyle="primary" size="md">
+      Press me!
+    </Button>
+    <Button buttonStyle="primary" size="sm">
+      Press me!
+    </Button>
+  </div>
+);
