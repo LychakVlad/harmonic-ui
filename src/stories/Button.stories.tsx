@@ -4,6 +4,17 @@ import Button, { ButtonProps, LinkProps } from "../components/Button/Button";
 export default {
   title: "Components/Button",
   component: Button,
+  argTypes: {
+    children: { control: "text" },
+    buttonStyle: {
+      options: ["primary", "outline", "danger", "success", "warning"],
+      control: { type: "radio" },
+    },
+    size: { options: ["sm", "md", "lg"], control: { type: "radio" } },
+    disabled: { control: "boolean" },
+    isLoading: { control: "boolean" },
+    href: { control: "text" },
+  },
 };
 
 const Template: StoryFn<ButtonProps | LinkProps> = (args) => (
@@ -22,6 +33,7 @@ BaseLink.args = {
   children: "Go to main page!",
   buttonStyle: "primary",
   href: "/",
+  size: "md",
 };
 
 export const Loading = Template.bind({});

@@ -27,7 +27,6 @@ const ButtonComponent = ({
   disabled = false,
   isLoading = false,
   type,
-
   ...props
 }: ButtonProps) => {
   const isLoadingClass = isLoading ? "btn--loading" : "";
@@ -51,7 +50,6 @@ const Link = ({
   children,
   buttonStyle = "primary",
   size = "sm",
-  disabled = false,
   href,
   ...props
 }: LinkProps) => {
@@ -75,13 +73,7 @@ const Button = ({
 }: ButtonProps | LinkProps) => {
   if (href) {
     return (
-      <Link
-        {...props}
-        buttonStyle={buttonStyle}
-        size={size}
-        disabled={disabled}
-        href={href}
-      >
+      <Link {...props} buttonStyle={buttonStyle} size={size} href={href}>
         {children}
       </Link>
     );
