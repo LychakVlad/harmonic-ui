@@ -3,7 +3,7 @@ import "./Spinner.scss";
 export interface SpinnerProps {
   spinerStyle: "primary" | "outline" | "danger" | "success" | "warning";
   size: "sm" | "md" | "lg";
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 export const Spinner = ({ spinerStyle, size, disabled }: SpinnerProps) => {

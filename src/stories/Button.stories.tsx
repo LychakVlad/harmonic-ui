@@ -1,17 +1,27 @@
 import { StoryFn } from "@storybook/react";
-import { Button, ButtonProps } from "../components/Button/Button";
+import Button, { ButtonProps, LinkProps } from "../components/Button/Button";
 
 export default {
   title: "Components/Button",
   component: Button,
 };
 
-const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
+const Template: StoryFn<ButtonProps | LinkProps> = (args) => (
+  <Button {...args} />
+);
 
-export const Base = Template.bind({});
-Base.args = {
+export const BaseButton = Template.bind({});
+BaseButton.args = {
   children: "Press me!",
   buttonStyle: "primary",
+  type: "submit",
+};
+
+export const BaseLink = Template.bind({});
+BaseLink.args = {
+  children: "Go to main page!",
+  buttonStyle: "primary",
+  href: "/",
 };
 
 export const Loading = Template.bind({});
